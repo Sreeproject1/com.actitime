@@ -12,10 +12,9 @@ import com.acti.base.DriverScript;
 
 public class EnterTimePage extends DriverScript {
 	// **** Page Elements ******
-	@FindBy(xpath = "//a[@class='userProfileLink username ']")
-	WebElement textUserLogged;
-	@FindBy(id = "logoutLink")
-	WebElement linkLogout;
+	@FindBy(xpath = "//a[@class='userProfileLink username ']") WebElement textUserLogged;
+	@FindBy(id = "logoutLink") WebElement linkLogout;
+	@FindBy(id = "container_tasks") WebElement menuTask;
 
 // **** Page Initialization ******
 
@@ -35,5 +34,10 @@ public class EnterTimePage extends DriverScript {
 	public String verifyUserLogged()
 	{
 		return textUserLogged.getText();
+	}
+	
+	public void clickTaskMenu()
+	{
+		menuTask.click();
 	}
 }

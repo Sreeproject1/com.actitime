@@ -6,11 +6,13 @@ import org.testng.annotations.BeforeMethod;
 import com.acti.base.DriverScript;
 import com.acti.pages.EnterTimePage;
 import com.acti.pages.LoginPage;
+import com.acti.pages.TaskListPage;
 
 public class BaseTest extends DriverScript{
 
 	LoginPage lp;
 	EnterTimePage etp;
+	TaskListPage tlp;
 	
 	@BeforeMethod
 	public void setUp()
@@ -18,6 +20,7 @@ public class BaseTest extends DriverScript{
 		initApplication();
 		lp = new LoginPage();
 		etp = new EnterTimePage();
+		tlp = new TaskListPage();
 	}
 	
 	@AfterMethod
